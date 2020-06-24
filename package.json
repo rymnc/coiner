@@ -32,5 +32,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/aaryamannchallani/coiner.git",
+  "author": "aaryamannchallani <aaryamannchallani7@gmail.com>",
+  "license": "MIT"
 }
