@@ -47,7 +47,7 @@ const HistoryChart = ({ charter }) => {
       });
     }
   });
-
+  
   const renderPrice = () => {
     if (detail) {
       return (
@@ -71,7 +71,7 @@ const HistoryChart = ({ charter }) => {
     <div className="bg-white border mt-2 rounded p-3">
       <div>{renderPrice()}</div>
       <div>
-        <canvas ref={chartRef} id="mychart" width={250} height={250}></canvas>
+        <canvas ref={chartRef} id="mychart" height={250}></canvas>
       </div>
       <div className="chart-button mt-1 text-center">
         <button

@@ -16,6 +16,7 @@ export const historyOptions = {
         type: "time",
         distribution: "linear",
       },
+      
     ],
   },
 };

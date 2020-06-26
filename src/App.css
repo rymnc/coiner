@@ -13,7 +13,10 @@ ul {
   list-style: none;
 }
 
-
+#chart{
+  width:100%;
+  height:40%
+}
 
 
 .coinlist-image {
