@@ -12,6 +12,15 @@ const CoinDetailPage = () => {
 
   const [isLoading,setIsLoading] = useState(false)
 
+  const formatData = (data) =>{
+      return data.map(el=>{
+          return {
+              t:el[0],
+              y:el[1].toFixed(2)
+          }
+      })
+  }
+
   useEffect(() => {
     const fetchData = async () => {
         setIsLoading(true)
@@ -44,7 +53,7 @@ const CoinDetailPage = () => {
         
         console.log(result)
       
-      setCoinData({days: result[0].data.prices, weeks: result[1].data.prices, years: result[2].data.prices, detail: result[3].data[0]})
+      setCoinData({days: formatData(result[0].data.prices), weeks: formatData(result[1].data.prices), years: formatData(result[2].data.prices), detail: result[3].data[0]})
       setIsLoading(false)
     };
     fetchData();
@@ -58,7 +67,7 @@ const CoinDetailPage = () => {
     }
     return (
       <div className="coinlist">
-        <HistoryChart />
+        <HistoryChart charter={coinData}/>
         <CoinData />
       </div>
     );
