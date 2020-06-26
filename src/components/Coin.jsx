@@ -13,7 +13,7 @@ const Coin = ({coin,handleDelete}) => {
 
   
     return (
-       <Link to='/coindetail' className="text-decoration-none my-1 coin">
+       <Link to={`/coins/${coin.id}`} className="text-decoration-none my-1 coin">
            <li className="coinlist-item list-group-item list-group-item-action d-flex justify-content-between align-items-center text-dark">
                <img src={coin.image} alt="" className='coinlist-image'/>
                <span className="text-decoration-none">{coin.current_price}$</span>

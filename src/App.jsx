@@ -17,8 +17,13 @@ const App = () => {
             <BrowserRouter>
         <Header/>
          <Route exact path='/'>
+
          <CoinSummaryPage/>
              </Route>          
+
+        <Route path='/coins/:id'>
+            <CoinDetailPage/>
+        </Route>
            
         </BrowserRouter>
         </WatchListContextProvider>
