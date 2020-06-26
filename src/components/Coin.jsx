@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Coin = ({coin}) => {
+const Coin = ({coin,handleDelete}) => {
+
+  //  const {handleDelete} = useContext(WatchListContext)
 
     let classy = "fas align-middle mr-1 fa-sort-"
     const getarrow = () =>{
@@ -19,7 +21,9 @@ const Coin = ({coin}) => {
                <i className={coin.price_change_percentage_24h<0?"fas align-middle mr-1 fa-sort-down":"fas align-middle mr-1 fa-sort-up"}></i>{Math.abs(coin.price_change_percentage_24h)}
                </span>
 
-               <i className="delete-icon far fa-times-circle text-danger"></i>
+               <i className="delete-icon far fa-times-circle text-danger" onClick={(e)=>{
+                   e.preventDefault();
+                   handleDelete(coin.id)}}></i>
 
            </li>
        </Link>

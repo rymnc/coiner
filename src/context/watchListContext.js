@@ -10,8 +10,14 @@ export const WatchListContextProvider = (props) => {
     "dai",
   ]);
 
+  const handleDelete = (coin) =>{
+    setWatchList(watchList.filter(el=>{
+      return el!==coin
+    }))
+  }
+
   return (
-    <WatchListContext.Provider value={{ watchList }}>
+    <WatchListContext.Provider value={{ watchList , handleDelete}}>
       {props.children}
     </WatchListContext.Provider>
   );
