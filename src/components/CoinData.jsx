@@ -14,7 +14,7 @@ const CoinData = ({ detail }) => {
               </span>
               <span>{detail.market_cap}</span>
             </div>
-            <hr />
+            
             <div className="d-flex flex-column">
               <span className="span text-muted coin-data-category">
                 Total Supply
@@ -30,7 +30,7 @@ const CoinData = ({ detail }) => {
               </span>
               <span>{detail.total_volume}</span>
             </div>
-            <hr />
+            
             <div className="d-flex flex-column">
               <span className="span text-muted coin-data-category">
                 High(24h)
@@ -46,7 +46,7 @@ const CoinData = ({ detail }) => {
               </span>
               <span>{detail.circulating_supply}</span>
             </div>
-            <hr />
+            
             <div className="d-flex flex-column">
               <span className="span text-muted coin-data-category">
                 Low(24h)
